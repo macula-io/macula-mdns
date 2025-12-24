@@ -1,4 +1,4 @@
-{application, mdns, [
+{application, macula_mdns, [
     {description, "Multicast DNS (mDNS/Zeroconf/Bonjour) for Erlang/OTP"},
     {vsn, "0.1.0"},
     {registered, []},
@@ -7,11 +7,11 @@
         kernel,
         stdlib,
         crypto,
-        envy,
+        macula_envy,
         gproc
     ]},
     {env, []},
     {modules, []},
     {licenses, ["Apache-2.0"]},
-    {links, [{"GitHub", "https://github.com/macula-io/mdns"}]}
+    {links, [{"GitHub", "https://github.com/macula-io/macula-mdns"}]}
 ]}.

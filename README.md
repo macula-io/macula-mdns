@@ -1,7 +1,7 @@
-# Multicast DNS (mDNS)
+# Macula mDNS
 
-[![Hex.pm](https://img.shields.io/hexpm/v/mdns.svg)](https://hex.pm/packages/mdns)
-[![Hex Docs](https://img.shields.io/badge/hex-docs-blue.svg)](https://hexdocs.pm/mdns)
+[![Hex.pm](https://img.shields.io/hexpm/v/macula_mdns.svg)](https://hex.pm/packages/macula_mdns)
+[![Hex Docs](https://img.shields.io/badge/hex-docs-blue.svg)](https://hexdocs.pm/macula_mdns)
 
 **Zero-configuration networking for Erlang/OTP applications using Multicast DNS.**
 
@@ -25,13 +25,15 @@ mDNS is an implementation of the [Multicast DNS](http://files.multicastdns.org/d
 
 ## Installation
 
-Add `mdns` to your `rebar.config` dependencies:
+Add `macula_mdns` to your `rebar.config` dependencies:
 
 ```erlang
 {deps, [
-    {mdns, "0.1.0"}
+    {macula_mdns, "0.1.0"}
 ]}.
 ```
+
+**Note:** The hex package is named `macula_mdns`, but the OTP application is `mdns` for compatibility with the original API.
 
 ## Quick Start
 
@@ -173,7 +175,7 @@ See [Macula mDNS Setup Guide](https://hexdocs.pm/macula/mdns_setup.html) for int
 ## Dependencies
 
 - [gproc](https://hex.pm/packages/gproc) - Extended process registry with pub/sub
-- [envy](https://hex.pm/packages/envy) - Environment configuration
+- [macula_envy](https://hex.pm/packages/macula_envy) - Environment configuration
 
 ## Requirements
 
@@ -210,5 +212,5 @@ Apache-2.0
 - [Macula Platform](https://github.com/macula-io/macula) - HTTP/3 mesh networking platform
 - [mDNS RFC](http://files.multicastdns.org/draft-cheshire-dnsext-multicastdns.txt) - Protocol specification
 - [DNS-SD RFC 6763](http://www.ietf.org/rfc/rfc6763.txt) - Service discovery specification
-- [Hex.pm Package](https://hex.pm/packages/mdns)
-- [Documentation](https://hexdocs.pm/mdns)
+- [Hex.pm Package](https://hex.pm/packages/macula_mdns)
+- [Documentation](https://hexdocs.pm/macula_mdns)
