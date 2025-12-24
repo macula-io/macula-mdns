@@ -2,6 +2,8 @@
 *.beam
 deps/*
 erl_crash.dump
+rebar.lock
+_build
 *.plt
 .eunit
 ebin/*.app

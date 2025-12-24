@@ -93,10 +93,10 @@ code_change(_OldVsn, State, _Extra) ->
 
 
 random_timeout(initial) ->
-    crypto:rand_uniform(500, 1500).
+    500 + rand:uniform(1000).
 
 random_timeout(announcements, TTL) ->
-    crypto:rand_uniform(TTL * 500, TTL * 1000).
+    (TTL * 500) + rand:uniform(TTL * 500).
 
 
 announce(#{address := Address,
