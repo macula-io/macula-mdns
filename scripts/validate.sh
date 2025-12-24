@@ -12,7 +12,7 @@ echo "============================================"
 echo ""
 
 # Version check
-PACKAGE_VERSION=$(grep -oP '(?<={vsn, ")[^"]+' src/mdns.app.src)
+PACKAGE_VERSION=$(grep -oP '(?<={vsn, ")[^"]+' src/macula_mdns.app.src)
 echo "Version: $PACKAGE_VERSION"
 echo ""
 
