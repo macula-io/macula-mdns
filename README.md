@@ -209,7 +209,7 @@ Apache-2.0
 ## Links
 
 - [Original Repository](https://github.com/shortishly/mdns) - Peter Morgan's original implementation
-- [Macula Platform](https://github.com/macula-io/macula) - HTTP/3 mesh networking platform
+- [Macula Platform](https://codeberg.org/macula-io/macula) - HTTP/3 mesh networking platform
 - [mDNS RFC](http://files.multicastdns.org/draft-cheshire-dnsext-multicastdns.txt) - Protocol specification
 - [DNS-SD RFC 6763](http://www.ietf.org/rfc/rfc6763.txt) - Service discovery specification
 - [Hex.pm Package](https://hex.pm/packages/macula_mdns)
