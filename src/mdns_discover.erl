@@ -212,19 +212,15 @@ handle_advertisement(_, _, [], _, _, State) ->
     State.
 
 txt_kvs(Data) ->
-    lists:foldl(
-      fun
-          (KV, KVS) ->
-              case string:tokens(KV, "=") of
-                  [K, V] ->
-                      KVS#{any:to_atom(K) => V};
+    lists:foldl(fun txt_kv/2, #{}, Data).
 
-                  [_K] ->
-                      KVS
-              end
-      end,
-      #{},
-      Data).
+txt_kv(KV, KVS) ->
+    txt_kv_tokens(string:tokens(KV, "="), KVS).
+
+txt_kv_tokens([K, V], KVS) ->
+    KVS#{any:to_atom(K) => V};
+txt_kv_tokens([_K], KVS) ->
+    KVS.
 
 get_value(Key, List) ->
     proplists:get_value(Key, List).
