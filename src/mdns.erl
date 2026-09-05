@@ -22,7 +22,7 @@
 -export([vsn/0]).
 
 start() ->
-    application:ensure_all_started(?MODULE).
+    application:ensure_all_started(macula_mdns).
 
 subscribe(EventType) ->
     gproc:reg({p, l, {?MODULE, EventType}}).
@@ -32,7 +32,7 @@ notify(EventType, Msg) ->
     gproc:send({p, l, Key}, {self(), Key, Msg}).
 
 vsn() ->
-    {ok, VSN} = application:get_key(?MODULE, vsn),
+    {ok, VSN} = application:get_key(macula_mdns, vsn),
     VSN.
 
 
@@ -41,7 +41,7 @@ ensure_loaded() ->
 
 
 modules() ->
-    {ok, Modules} = application:get_key(?MODULE, modules),
+    {ok, Modules} = application:get_key(macula_mdns, modules),
     Modules.
 
 

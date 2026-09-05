@@ -4,17 +4,17 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.38.2">
-    <meta name="project" content="macula_mdns v0.1.0">
+    <meta name="generator" content="ExDoc v0.40.3">
+    <meta name="project" content="macula_mdns v0.1.1">
 
 
-    <title>mdns_config — macula_mdns v0.1.0</title>
+    <title>mdns_config — macula_mdns v0.1.1</title>
 
-    <link rel="stylesheet" href="dist/html-erlang-DQDXQC7W.css" />
+    <link rel="stylesheet" href="dist/html-erlang-KCHZLXSC.css" />
 
-    <script defer src="dist/sidebar_items-361FE753.js"></script>
+    <script defer src="dist/sidebar_items-0B5B1FDF.js"></script>
     <script defer src="docs_config.js"></script>
-    <script defer src="dist/html-DPJLHKSM.js"></script>
+    <script defer src="dist/html-Y2MUTVIN.js"></script>
 
   </head>
   <body>
@@ -37,11 +37,11 @@
 macula_mdns
         </a>
         <div class="sidebar-projectVersion" translate="no">
-          v0.1.0
+          v0.1.1
         </div>
       </div>
     </div>
-    <ul id="sidebar-list-nav" class="sidebar-list-nav" role="tablist" data-extras=""></ul>
+    <ul id="sidebar-list-nav" class="sidebar-list-nav" role="tablist" data-extras="Pages"></ul>
   </div>
 </nav>
 
@@ -54,16 +54,34 @@ macula_mdns
         <form class="search-bar" action="search.html">
           <label class="search-label">
             <span class="sr-only">Search documentation of macula_mdns</span>
-            <input name="q" type="text" class="search-input" placeholder="Press / to search" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
+            <div class="search-input-wrapper">
+              <input name="q" type="text" class="search-input" placeholder="Press / to search" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
+              <button type="button" tabindex="-1" class="search-close-button" aria-hidden="true">
+                <i class="ri-close-line ri-lg" title="Cancel search"></i>
+              </button>
+            </div>
           </label>
-          <button type="submit" class="search-button" aria-label="Submit Search" tabindex="-1">
-            <i class="ri-search-2-line ri-lg" aria-hidden="true"></i>
-          </button>
-          <button type="button" tabindex="-1" class="search-close-button" aria-hidden="true">
-            <i class="ri-close-line ri-lg" title="Cancel search"></i>
-          </button>
         </form>
         <div class="autocomplete">
+        </div>
+        <div class="engine-selector" data-multiple="false">
+          <button type="button" class="engine-button" aria-label="Select search engine" aria-haspopup="true" aria-expanded="false">
+            <i class="ri-search-2-line" aria-hidden="true"></i>
+            <span class="engine-name">Default</span>
+            <i class="ri-arrow-down-s-line" aria-hidden="true"></i>
+          </button>
+          <div class="engine-dropdown" hidden role="menu">
+
+              <button type="button"
+                      class="engine-option"
+                      data-engine-url="search.html?q="
+                      role="menuitemradio"
+                      aria-checked="true">
+                <span class="name">Default</span>
+                <span class="help">In-browser search</span>
+              </button>
+
+          </div>
         </div>
         <button class="icon-settings display-settings">
           <i class="ri-settings-3-line"></i>
@@ -76,11 +94,12 @@ macula_mdns
   <div class="heading-with-actions top-heading">
     <h1>
       <span translate="no">mdns_config</span> 
-      <small class="app-vsn" translate="no">(macula_mdns v0.1.0)</small>
+      <small class="app-vsn" translate="no">(macula_mdns v0.1.1)</small>
 
     </h1>
 
-      <a href="https://github.com/macula-io/macula-mdns/blob/v0.1.0/src/mdns_config.erl#L15" title="View Source" class="icon-action" rel="help">
+
+      <a href="https://github.com/macula-io/macula-mdns/blob/v0.1.1/src/mdns_config.erl#L15" title="View Source" class="icon-action" rel="help nofollow">
         <i class="ri-code-s-slash-line" aria-hidden="true"></i>
         <span class="sr-only">View Source</span>
       </a>
@@ -91,16 +110,16 @@ macula_mdns
 </div>
 
   <section id="summary" class="details-list">
-    <h1 class="section-heading">
+    <h2 class="section-heading">
       <a class="hover-link" href="#summary">
         <i class="ri-link-m" aria-hidden="true"></i>
       </a>
       <span class="text">Summary</span>
-    </h1>
+    </h2>
 <div class="summary-functions summary">
-  <h2>
+  <h3>
     <a href="#functions">Functions</a>
-  </h2>
+  </h3>
 
     <div class="summary-row">
       <div class="summary-signature">
@@ -164,12 +183,13 @@ macula_mdns
 
 
   <section id="functions" class="details-list">
-    <h1 class="section-heading">
+    <h2 class="section-heading">
       <a class="hover-link" href="#functions">
         <i class="ri-link-m" aria-hidden="true"></i>
       </a>
       <span class="text">Functions</span>
-    </h1>
+    </h2>
+
     <div class="functions-list">
 <section class="detail" id="address/1">
 
@@ -181,7 +201,7 @@ macula_mdns
       <h1 class="signature" translate="no">address(_)</h1>
 
 
-        <a href="https://github.com/macula-io/macula-mdns/blob/v0.1.0/src/mdns_config.erl#L37" class="icon-action" rel="help" aria-label="View Source">
+        <a href="https://github.com/macula-io/macula-mdns/blob/v0.1.1/src/mdns_config.erl#L37" class="icon-action" rel="help nofollow" aria-label="View Source">
           <i class="ri-code-s-slash-line" aria-hidden="true"></i>
         </a>
 
@@ -203,7 +223,7 @@ macula_mdns
       <h1 class="signature" translate="no">can(_)</h1>
 
 
-        <a href="https://github.com/macula-io/macula-mdns/blob/v0.1.0/src/mdns_config.erl#L27" class="icon-action" rel="help" aria-label="View Source">
+        <a href="https://github.com/macula-io/macula-mdns/blob/v0.1.1/src/mdns_config.erl#L27" class="icon-action" rel="help nofollow" aria-label="View Source">
           <i class="ri-code-s-slash-line" aria-hidden="true"></i>
         </a>
 
@@ -225,7 +245,7 @@ macula_mdns
       <h1 class="signature" translate="no">domain()</h1>
 
 
-        <a href="https://github.com/macula-io/macula-mdns/blob/v0.1.0/src/mdns_config.erl#L50" class="icon-action" rel="help" aria-label="View Source">
+        <a href="https://github.com/macula-io/macula-mdns/blob/v0.1.1/src/mdns_config.erl#L50" class="icon-action" rel="help nofollow" aria-label="View Source">
           <i class="ri-code-s-slash-line" aria-hidden="true"></i>
         </a>
 
@@ -247,7 +267,7 @@ macula_mdns
       <h1 class="signature" translate="no">environment()</h1>
 
 
-        <a href="https://github.com/macula-io/macula-mdns/blob/v0.1.0/src/mdns_config.erl#L47" class="icon-action" rel="help" aria-label="View Source">
+        <a href="https://github.com/macula-io/macula-mdns/blob/v0.1.1/src/mdns_config.erl#L47" class="icon-action" rel="help nofollow" aria-label="View Source">
           <i class="ri-code-s-slash-line" aria-hidden="true"></i>
         </a>
 
@@ -269,7 +289,7 @@ macula_mdns
       <h1 class="signature" translate="no">port(_)</h1>
 
 
-        <a href="https://github.com/macula-io/macula-mdns/blob/v0.1.0/src/mdns_config.erl#L34" class="icon-action" rel="help" aria-label="View Source">
+        <a href="https://github.com/macula-io/macula-mdns/blob/v0.1.1/src/mdns_config.erl#L34" class="icon-action" rel="help nofollow" aria-label="View Source">
           <i class="ri-code-s-slash-line" aria-hidden="true"></i>
         </a>
 
@@ -291,7 +311,7 @@ macula_mdns
       <h1 class="signature" translate="no">service()</h1>
 
 
-        <a href="https://github.com/macula-io/macula-mdns/blob/v0.1.0/src/mdns_config.erl#L53" class="icon-action" rel="help" aria-label="View Source">
+        <a href="https://github.com/macula-io/macula-mdns/blob/v0.1.1/src/mdns_config.erl#L53" class="icon-action" rel="help nofollow" aria-label="View Source">
           <i class="ri-code-s-slash-line" aria-hidden="true"></i>
         </a>
 
@@ -313,7 +333,7 @@ macula_mdns
       <h1 class="signature" translate="no">ttl()</h1>
 
 
-        <a href="https://github.com/macula-io/macula-mdns/blob/v0.1.0/src/mdns_config.erl#L56" class="icon-action" rel="help" aria-label="View Source">
+        <a href="https://github.com/macula-io/macula-mdns/blob/v0.1.1/src/mdns_config.erl#L56" class="icon-action" rel="help nofollow" aria-label="View Source">
           <i class="ri-code-s-slash-line" aria-hidden="true"></i>
         </a>
 
@@ -330,34 +350,37 @@ macula_mdns
   </section>
 
     <footer class="footer">
-      <p>
+
+        <p>
+
+            <span class="line">
+              <a href="https://hex.pm/packages/macula_mdns/0.1.1">Hex Package</a>
+
+              <a href="https://preview.hex.pm/preview/macula_mdns/0.1.1">Hex Preview</a>
+
+            </span>
 
           <span class="line">
-            <a href="https://hex.pm/packages/macula_mdns/0.1.0" class="footer-hex-package">Hex Package</a>
+            <button class="a-main footer-button display-quick-switch" title="Go to package docs">
+              Go to package docs
+            </button>
 
-            <a href="https://preview.hex.pm/preview/macula_mdns/0.1.0">Hex Preview</a>
+
+              <a href="macula_mdns.epub">
+                Download ePub version
+              </a>
 
           </span>
+        </p>
 
-        <span class="line">
-          <button class="a-main footer-button display-quick-switch" title="Search HexDocs packages">
-            Search HexDocs
-          </button>
+        <p class="built-using">
+          Built using
+          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener" translate="no">ExDoc</a> (v0.40.3) for the
 
-            <a href="macula_mdns.epub" title="ePub version">
-              Download ePub version
-            </a>
+            <a href="https://erlang.org" title="Erlang" target="_blank" translate="no">Erlang programming language</a>
 
-        </span>
-      </p>
+        </p>
 
-      <p class="built-using">
-        Built using
-        <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener" translate="no">ExDoc</a> (v0.38.2) for the
-
-          <a href="https://erlang.org" title="Erlang" target="_blank" translate="no">Erlang programming language</a>
-
-      </p>
 
     </footer>
   </div>

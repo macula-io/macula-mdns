@@ -4,17 +4,17 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.38.2">
-    <meta name="project" content="macula_mdns v0.1.0">
+    <meta name="generator" content="ExDoc v0.40.3">
+    <meta name="project" content="macula_mdns v0.1.1">
 
 
-    <title>Changelog — macula_mdns v0.1.0</title>
+    <title>Changelog — macula_mdns v0.1.1</title>
 
-    <link rel="stylesheet" href="dist/html-erlang-DQDXQC7W.css" />
+    <link rel="stylesheet" href="dist/html-erlang-KCHZLXSC.css" />
 
-    <script defer src="dist/sidebar_items-361FE753.js"></script>
+    <script defer src="dist/sidebar_items-0B5B1FDF.js"></script>
     <script defer src="docs_config.js"></script>
-    <script defer src="dist/html-DPJLHKSM.js"></script>
+    <script defer src="dist/html-Y2MUTVIN.js"></script>
 
   </head>
   <body>
@@ -37,11 +37,11 @@
 macula_mdns
         </a>
         <div class="sidebar-projectVersion" translate="no">
-          v0.1.0
+          v0.1.1
         </div>
       </div>
     </div>
-    <ul id="sidebar-list-nav" class="sidebar-list-nav" role="tablist" data-extras=""></ul>
+    <ul id="sidebar-list-nav" class="sidebar-list-nav" role="tablist" data-extras="Pages"></ul>
   </div>
 </nav>
 
@@ -54,16 +54,34 @@ macula_mdns
         <form class="search-bar" action="search.html">
           <label class="search-label">
             <span class="sr-only">Search documentation of macula_mdns</span>
-            <input name="q" type="text" class="search-input" placeholder="Press / to search" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
+            <div class="search-input-wrapper">
+              <input name="q" type="text" class="search-input" placeholder="Press / to search" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
+              <button type="button" tabindex="-1" class="search-close-button" aria-hidden="true">
+                <i class="ri-close-line ri-lg" title="Cancel search"></i>
+              </button>
+            </div>
           </label>
-          <button type="submit" class="search-button" aria-label="Submit Search" tabindex="-1">
-            <i class="ri-search-2-line ri-lg" aria-hidden="true"></i>
-          </button>
-          <button type="button" tabindex="-1" class="search-close-button" aria-hidden="true">
-            <i class="ri-close-line ri-lg" title="Cancel search"></i>
-          </button>
         </form>
         <div class="autocomplete">
+        </div>
+        <div class="engine-selector" data-multiple="false">
+          <button type="button" class="engine-button" aria-label="Select search engine" aria-haspopup="true" aria-expanded="false">
+            <i class="ri-search-2-line" aria-hidden="true"></i>
+            <span class="engine-name">Default</span>
+            <i class="ri-arrow-down-s-line" aria-hidden="true"></i>
+          </button>
+          <div class="engine-dropdown" hidden role="menu">
+
+              <button type="button"
+                      class="engine-option"
+                      data-engine-url="search.html?q="
+                      role="menuitemradio"
+                      aria-checked="true">
+                <span class="name">Default</span>
+                <span class="help">In-browser search</span>
+              </button>
+
+          </div>
         </div>
         <button class="icon-settings display-settings">
           <i class="ri-settings-3-line"></i>
@@ -77,7 +95,8 @@ macula_mdns
     <h1>Changelog</h1>
 
 
-      <a href="https://github.com/macula-io/macula-mdns/blob/v0.1.0/CHANGELOG.md#L1" title="View Source" class="icon-action" rel="help">
+
+      <a href="https://github.com/macula-io/macula-mdns/blob/v0.1.1/CHANGELOG.md#L1" title="View Source" class="icon-action" rel="help nofollow">
         <i class="ri-code-s-slash-line" aria-hidden="true"></i>
         <span class="sr-only">View Source</span>
       </a>
@@ -85,7 +104,36 @@ macula_mdns
   </div>
 
 
-<p>All notable changes to this project will be documented in this file.</p><h2 id="0-1-0-2024-12-24" class="section-heading"><a href="#0-1-0-2024-12-24" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i></a><span class="text">[0.1.0] - 2024-12-24</span></h2><h3 id="added" class="section-heading"><a href="#added" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i></a><span class="text">Added</span></h3><ul><li>Initial release as <code class="inline">macula_mdns</code> on hex.pm</li><li>rebar3 build support (original used erlang.mk)</li><li>hex.pm package configuration</li><li>ex_doc documentation support</li><li>Fixed deprecated <code class="inline">crypto:rand_uniform</code> calls</li></ul><h3 id="attribution" class="section-heading"><a href="#attribution" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i></a><span class="text">Attribution</span></h3><p>This is a fork of <a href="https://github.com/shortishly/mdns">shortishly/mdns</a> by Peter Morgan.
+<p>All notable changes to this project will be documented in this file.</p><h2 id="0-1-1-2026-09-05" class="section-heading"><a href="#0-1-1-2026-09-05" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i></a><span class="text">[0.1.1] - 2026-09-05</span></h2><h3 id="fixed" class="section-heading"><a href="#fixed" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i></a><span class="text">Fixed</span></h3><ul><li><strong><a href="mdns.html#vsn/0"><code class="inline">mdns:vsn/0</code></a>, <a href="mdns.html#start/0"><code class="inline">mdns:start/0</code></a>, and a private module-listing helper
+referenced the wrong OTP application name, crash-looping the built-in
+advertiser on every distributed node.</strong> These called <a href="https://www.erlang.org/doc/apps/kernel/application.html#get_key/2"><code class="inline">application:get_key/2</code></a> and
+<a href="https://www.erlang.org/doc/apps/kernel/application.html#ensure_all_started/1"><code class="inline">application:ensure_all_started/1</code></a> with <code class="inline">?MODULE</code> (<code class="inline">mdns</code>), left over
+from before the 0.1.0 rename to <code class="inline">macula_mdns</code> — so <code class="inline">get_key(mdns, vsn)</code>
+always returned <code class="inline">undefined</code> and badmatched. <code class="inline">mdns_erlang_tcp_advertiser</code>
+calls <a href="mdns.html#vsn/0"><code class="inline">mdns:vsn/0</code></a> on every announce; found and reproduced on a real
+<code class="inline">-sname</code> node: the advertiser crashes, restarts, crashes again ~1s
+later, <code class="inline">mdns_advertise_sup</code> hits <code class="inline">reached_max_restart_intensity</code> and
+shuts down, and the app is left running with no advertiser and no
+further restart attempt — silently, since <a href="https://www.erlang.org/doc/apps/kernel/application.html#which_applications/0"><code class="inline">application:which_applications/0</code></a>
+still reports <code class="inline">macula_mdns</code> as up. Fixed all three call sites to use
+<code class="inline">macula_mdns</code> directly; <code class="inline">subscribe/1</code> and <code class="inline">notify/2</code>'s use of <code class="inline">?MODULE</code>
+as a gproc namespace key is unrelated and untouched. Verified with a
+before/after boot test on a real distributed node: 2 crash reports + 1
+supervisor shutdown before the fix, 0 of either after, over an 8s idle
+window. Pre-existing since the 0.1.0 rename; unrelated to the gproc bump
+below (reproduced identically under both gproc 0.9.1 and 1.3.0).</li></ul><h3 id="changed" class="section-heading"><a href="#changed" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i></a><span class="text">Changed</span></h3><ul><li><code class="inline">gproc</code> bumped <code class="inline">0.9.1 → 1.3.0</code> and loosened <code class="inline">&quot;0.9.1&quot;</code> → <code class="inline">&quot;~&gt; 1.3&quot;</code>; the
+previous exact pin made it impossible for a consumer resolving both
+this package and macula-io/macula together to ever satisfy macula's
+own <code class="inline">gproc ~&gt; 1.3</code> — a real solver conflict, not a hypothetical one
+(surfaced by an adversarial review of macula 10.20.0, which depends on
+this package). Verified safe: gproc 0.9.1→1.3.0 audited commit-by-commit
+across all 4 tag jumps (macula-io/macula's CHANGELOG has the full trace)
+— purely additive remote-registration API plus internal non-exported
+refactors plus an OTP 29 warnings fix. This library's own gproc surface
+(<a href="https://hexdocs.pm/gproc/gproc.html#reg/1"><code class="inline">gproc:reg/1</code></a>, <a href="https://hexdocs.pm/gproc/gproc.html#send/2"><code class="inline">gproc:send/2</code></a>, <a href="https://hexdocs.pm/gproc/gproc.html#goodbye/0"><code class="inline">gproc:goodbye/0</code></a>, <code class="inline">{via, gproc, ...}</code>
+in <code class="inline">mdns_advertise</code>/<code class="inline">mdns_discover</code>) is untouched by any of it.</li><li><code class="inline">macula_envy</code> loosened <code class="inline">&quot;0.1.1&quot;</code> → <code class="inline">&quot;~&gt; 0.1.1&quot;</code> (no version change,
+same exact-pin hygiene fix; three-segment form since it's a 0.x
+package and <code class="inline">~&gt; 0.1</code> alone would admit a future breaking minor).</li></ul><h2 id="0-1-0-2024-12-24" class="section-heading"><a href="#0-1-0-2024-12-24" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i></a><span class="text">[0.1.0] - 2024-12-24</span></h2><h3 id="added" class="section-heading"><a href="#added" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i></a><span class="text">Added</span></h3><ul><li>Initial release as <code class="inline">macula_mdns</code> on hex.pm</li><li>rebar3 build support (original used erlang.mk)</li><li>hex.pm package configuration</li><li>ex_doc documentation support</li><li>Fixed deprecated <code class="inline">crypto:rand_uniform</code> calls</li></ul><h3 id="attribution" class="section-heading"><a href="#attribution" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i></a><span class="text">Attribution</span></h3><p>This is a fork of <a rel="nofollow" href="https://github.com/shortishly/mdns">shortishly/mdns</a> by Peter Morgan.
 All credit for the original design and implementation goes to Peter Morgan.</p><h3 id="changes-from-original" class="section-heading"><a href="#changes-from-original" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i></a><span class="text">Changes from original</span></h3><ul><li>Added <code class="inline">rebar.config</code> for rebar3 compatibility</li><li>Added <code class="inline">macula_mdns.app.src</code> for OTP application spec</li><li>Package published to hex.pm as <code class="inline">macula_mdns</code></li><li>Depends on <code class="inline">macula_envy</code> instead of <code class="inline">envy</code></li><li>Module names remain <code class="inline">mdns*</code> for API compatibility</li><li>Replaced deprecated <a href="https://www.erlang.org/doc/apps/crypto/crypto.html#rand_uniform/2"><code class="inline">crypto:rand_uniform/2</code></a> with <a href="https://www.erlang.org/doc/apps/stdlib/rand.html#uniform/1"><code class="inline">rand:uniform/1</code></a></li></ul>
 
 </div>
@@ -117,36 +165,39 @@ LICENSE
   </div>
 </div>
     <footer class="footer">
-      <p>
+
+        <p>
+
+            <span class="line">
+              <a href="https://hex.pm/packages/macula_mdns/0.1.1">Hex Package</a>
+
+              <a href="https://preview.hex.pm/preview/macula_mdns/0.1.1">Hex Preview</a>
+
+                (<a href="https://preview.hex.pm/preview/macula_mdns/0.1.1/show/CHANGELOG.md">current file</a>)
+
+            </span>
 
           <span class="line">
-            <a href="https://hex.pm/packages/macula_mdns/0.1.0" class="footer-hex-package">Hex Package</a>
+            <button class="a-main footer-button display-quick-switch" title="Go to package docs">
+              Go to package docs
+            </button>
 
-            <a href="https://preview.hex.pm/preview/macula_mdns/0.1.0">Hex Preview</a>
 
-              (<a href="https://preview.hex.pm/preview/macula_mdns/0.1.0/show/CHANGELOG.md">current file</a>)
+              <a href="macula_mdns.epub">
+                Download ePub version
+              </a>
 
           </span>
+        </p>
 
-        <span class="line">
-          <button class="a-main footer-button display-quick-switch" title="Search HexDocs packages">
-            Search HexDocs
-          </button>
+        <p class="built-using">
+          Built using
+          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener" translate="no">ExDoc</a> (v0.40.3) for the
 
-            <a href="macula_mdns.epub" title="ePub version">
-              Download ePub version
-            </a>
+            <a href="https://erlang.org" title="Erlang" target="_blank" translate="no">Erlang programming language</a>
 
-        </span>
-      </p>
+        </p>
 
-      <p class="built-using">
-        Built using
-        <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener" translate="no">ExDoc</a> (v0.38.2) for the
-
-          <a href="https://erlang.org" title="Erlang" target="_blank" translate="no">Erlang programming language</a>
-
-      </p>
 
     </footer>
   </div>
