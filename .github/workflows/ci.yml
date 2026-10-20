@@ -1,0 +1,70 @@
+name: ci
+
+# Compile on every push to a branch and every pull request.
+#
+# THIS REPOSITORY HAD NO CI, so nothing checked that it still builds. That is
+# all this gate can check: macula-mdns has no test suite at all, so there is no
+# EUnit or Common Test step to run, and a workflow that ran `rebar3 eunit` here
+# would report "0 tests" and prove nothing.
+#
+# rebar3, not the Makefile, for the same reason as macula-envy: this fork added
+# rebar.config as its supported build. Here the Makefile path does still work on
+# OTP 28, unlike envy's, but two forks of the same shape should be gated the
+# same way, and `make` additionally regenerates deps/ from git on every run.
+#
+# Dialyzer is not a step. It cannot build its PLT for this tree today: the
+# `macula_envy` hex package ships its application as `envy`, so `plt_apps` looks
+# for an application that is not under that name and the run stops before it
+# analyses anything. Recorded as a finding, not fixed here.
+#
+# On push and pull request, not dispatch-only: the failure mode being prevented
+# is "nobody remembered to run it", and a gate that only runs when someone
+# remembers preserves exactly that condition.
+#
+# `branches: ['**']` IS LOAD-BEARING. A `push` event fires for tag refs as well,
+# so without it this build would run a second time on every release tag. `**`
+# matches every branch and excludes tags.
+
+on:
+  push:
+    branches: ['**']
+    paths-ignore: ['**.md']
+  pull_request:
+    paths-ignore: ['**.md']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  OTP_VERSION: '28.4.3'
+  REBAR3_VERSION: '3.27.0'
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    name: compile (OTP 28.4.3)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Erlang/OTP and rebar3
+        uses: erlef/setup-beam@v1
+        with:
+          otp-version: ${{ env.OTP_VERSION }}
+          rebar3-version: ${{ env.REBAR3_VERSION }}
+          version-type: strict
+
+      - name: Cache hex deps
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/rebar3
+          key: macula-mdns-otp${{ env.OTP_VERSION }}-${{ hashFiles('rebar.config', 'src/*.app.src') }}
+          restore-keys: macula-mdns-otp${{ env.OTP_VERSION }}-
+
+      - name: Compile
+        run: rebar3 compile
