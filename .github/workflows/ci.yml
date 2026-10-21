@@ -68,3 +68,9 @@ jobs:
 
       - name: Compile
         run: rebar3 compile
+
+      # The structural floor (macula-codebase-checks#9): nesting 2, no nested
+      # try/catch, no if, functions at most 60 code lines. rebar3_lint lives in
+      # the lint profile, so the command is `rebar3 as lint lint`.
+      - name: Lint
+        run: rebar3 as lint lint
